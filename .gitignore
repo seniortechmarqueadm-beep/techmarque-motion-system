@@ -1,0 +1,14 @@
+node_modules*/
+.pnpm-store/
+.pnpm-techmarque-reel/
+work/
+dist/
+out/
+coverage/
+.env
+.env.*
+!.env.example
+*.log
+_tmp_*
+.DS_Store
+Thumbs.db

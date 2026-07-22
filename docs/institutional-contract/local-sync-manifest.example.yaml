@@ -1,0 +1,52 @@
+manifest_version: 1.0.0
+project: techmarque-motion-system
+created_at: "YYYY-MM-DDTHH:MM:SSZ"
+created_by: ""
+
+local_environment:
+  machine_label: ""
+  project_path: ""
+  remotion_studio_url: "http://localhost:3000/"
+  node_version: ""
+  pnpm_version: ""
+  remotion_version: ""
+
+repository:
+  remote: "seniortechmarqueadm-beep/techmarque-motion-system"
+  branch: ""
+  commit: ""
+  sync_status: synchronized | local_ahead | repository_ahead | partial_mirror | unknown
+
+scope:
+  included_paths: []
+  excluded_paths:
+    - node_modules
+    - out
+    - caches
+    - private_assets
+    - licensed_fonts
+    - secrets
+  local_only_components: []
+  repository_only_components: []
+
+validation:
+  files_compared: false
+  dependencies_installed: false
+  typecheck:
+    status: not_run
+    command: pnpm typecheck
+  lint:
+    status: not_run
+    command: pnpm lint
+  tests:
+    status: not_run
+    command: pnpm test
+  build:
+    status: not_run
+    command: pnpm build
+  remotion_studio:
+    status: not_verified
+  critical_frames: []
+
+limitations: []
+notes: ""

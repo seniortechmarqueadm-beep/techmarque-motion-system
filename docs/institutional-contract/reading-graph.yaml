@@ -1,0 +1,94 @@
+version: 1.0.0
+updated_at: 2026-07-22
+
+entrypoint:
+  notion_page: "0- GUIA DE LEITURA INSTITUCIONAL"
+  protocol: "0.1- PROTOCOLO DE LEITURA DA TECHMARQUE"
+  rules_database: "0.1.1- REGRAS DE LEITURA INSTITUCIONAL"
+  source_map: "0.2- MAPA DE FONTES DA VERDADE"
+  canonical_nodes: "0.3- MAPA DE NÓS CANÔNICOS"
+  company_flows: "0.4- FLUXOS PRINCIPAIS DA EMPRESA"
+  agent_rules: "0.5- REGRAS PARA AGENTES E ATUALIZAÇÕES"
+  gaps_and_learning: "0.6- PENDÊNCIAS, LACUNAS E APRENDIZADOS"
+
+pipeline:
+  - id: R00
+    name: classify_request
+    output:
+      - request_type
+      - affected_flow
+      - visible_area
+      - hidden_areas
+  - id: R01
+    name: resolve_reading_code
+    output:
+      - canonical_code
+      - aliases
+      - version
+  - id: R02
+    name: load_governing_node
+    output:
+      - governing_node
+      - required_predecessors
+  - id: R03
+    name: expand_sources
+    conditions:
+      formal_obligation: [notion, google_drive, binding_document]
+      technical_capability: [notion, github, local_environment]
+      published_state: [notion, github, vercel]
+      audiovisual_campaign: [notion, project_state, visual_dna, continuity_pack]
+  - id: R04
+    name: identify_operational_roles
+    output:
+      - governing_node
+      - executing_node
+      - recording_node
+      - deciding_node
+  - id: R05
+    name: separate_evidence
+    output:
+      - confirmed_facts
+      - inferences
+      - hypotheses
+      - missing_evidence
+  - id: R06
+    name: detect_conflicts_and_drift
+    output:
+      - authority_conflicts
+      - stale_sources
+      - version_conflicts
+      - risk_of_partial_reading
+  - id: R07
+    name: stop_or_expand
+    stop_when:
+      - objective_defined
+      - governing_source_identified
+      - current_state_loaded
+      - method_defined
+      - acceptance_defined
+      - critical_risks_resolved
+  - id: R08
+    name: produce_evidence_pack
+  - id: R09
+    name: propose_state_patch
+    human_validation_required_for:
+      - canonical_truth
+      - price
+      - commercial_promise
+      - contract
+      - sla
+      - policy
+      - owner
+      - source_hierarchy
+      - official_product_status
+
+rules:
+  - id: "0.1.1-1"
+    name: read_before_acting
+    status: active
+  - id: no_isolated_cross_area_reading
+    statement: "Do not conclude from one source when the topic crosses areas, tools, formal documents or technical capability."
+  - id: memory_is_locator_not_proof
+    statement: "Project memory can locate context but does not override a current canonical source."
+  - id: minimum_sufficient_reading
+    statement: "Load only sources that can alter authority, decision, method, risk or validation."

@@ -1,82 +1,95 @@
 # Techmarque Motion System
 
-Este projeto e o ponto central para criar videos, animacoes e templates de motion design da Techmarque usando React, TypeScript e Remotion.
+Repositório de referência, versionamento e colaboração técnica do sistema de motion design da Techmarque, baseado em React, TypeScript e Remotion.
 
-## O que existe aqui
+## Papel deste repositório
 
-O projeto comeca com uma composicao de exemplo chamada `TechmarqueMotionDemo`. Ela tem 5 segundos, tamanho Full HD (1920x1080), 30 quadros por segundo, fundo neutro e texto com entrada e saida suaves.
+A estação operacional primária permanece no ambiente local, onde o Remotion Studio, os assets privados, os caches e os renders de trabalho são executados. Este repositório funciona como:
 
-## Como instalar
+- espelho técnico controlado do ambiente local;
+- histórico de versões e decisões de engenharia;
+- ponto de colaboração com Codex e outros agentes;
+- armazenamento de código, schemas, testes e documentação não sensível;
+- contrato técnico do grafo institucional usado pelo Motion Director.
 
-1. Instale o Node.js, se ainda nao tiver.
-2. Abra a pasta do projeto no terminal.
-3. Rode:
+O conteúdo do GitHub não deve ser tratado automaticamente como cópia integral ou estado em tempo real do computador local. A equivalência entre os dois ambientes deve ser confirmada por commit, manifesto de sincronização ou handoff explícito.
+
+## Fontes da verdade
+
+| Domínio | Fonte principal |
+|---|---|
+| Lógica institucional, áreas, owners e fluxos | Notion — Página 0 e nós canônicos |
+| Contratos, propostas, OS, SLA e documentos formais | Google Drive |
+| Código, schemas, testes e histórico técnico | GitHub |
+| Estado publicado e deployments | Vercel |
+| Execução de Remotion, assets privados e renders intermediários | Ambiente local |
+| Estado da campanha e decisões audiovisuais | Project State, Decision Ledger, Visual DNA e Continuity Pack |
+
+Consulte `docs/institutional-contract/` para o contrato técnico dessas relações.
+
+## Estado do espelho
+
+Este repositório pode conter somente parte do projeto local. Antes de usar scripts, composições ou comandos como evidência de execução:
+
+1. confirme que os arquivos referenciados existem no branch atual;
+2. compare o manifesto de sincronização com o ambiente local;
+3. execute as validações correspondentes;
+4. não declare Studio, teste, build ou render como aprovado sem execução real.
+
+## Instalação esperada
+
+Quando o código local estiver sincronizado com este repositório:
 
 ```bash
 pnpm install
-```
-
-## Como abrir
-
-Para abrir o ambiente visual do Remotion, rode:
-
-```bash
 pnpm studio
 ```
 
-Tambem existe o comando:
+Comandos declarados no `package.json`:
 
-```bash
-pnpm dev
+- `pnpm dev` / `pnpm studio`: abre o Remotion Studio;
+- `pnpm typecheck`: valida TypeScript;
+- `pnpm lint`: executa lint;
+- `pnpm test`: executa testes;
+- `pnpm build`: gera o bundle;
+- scripts `render:*` e `still:*`: geram artefatos específicos.
+
+A existência do comando não comprova que a composição ou o arquivo de entrada está presente no espelho atual.
+
+## Estrutura recomendada
+
+```text
+src/                         código Remotion sincronizado
+public/                      assets liberados para versionamento
+projects/                    campanhas e produtos sem material sensível
+tests/                       testes automatizados
+scripts/                     automações reproduzíveis
+docs/                        documentação técnica
+  institutional-contract/   grafo, schemas e fontes da verdade
+out/                         renders locais ignorados pelo Git
 ```
 
-## Como visualizar a composicao
+## Fluxo Project → Codex → Remotion
 
-Depois que o Remotion Studio abrir, selecione `TechmarqueMotionDemo` na lista de composicoes.
-
-## Como renderizar o video de exemplo
-
-Para gerar um video MP4 da composicao de demonstracao, rode:
-
-```bash
-pnpm render:demo
+```text
+Motion Director Project
+→ briefing e estado aprovados
+→ Storyframe/Visual/Motion Packet
+→ Codex no repositório
+→ implementação local editável
+→ Remotion Studio
+→ frames críticos e comparação visual
+→ testes, render e State Patch
 ```
 
-O arquivo sera criado em `out/techmarque-motion-demo.mp4`.
+## Regras de segurança
 
-## Comandos principais
+- Nunca versionar senhas, tokens, chaves, cookies ou credenciais.
+- Manter `.env` local e somente modelos em `.env.example`.
+- Não versionar fontes licenciadas ou assets de clientes sem autorização.
+- Não publicar conteúdo institucional integral copiado do Notion ou documentos formais do Drive.
+- Usar IDs, URLs canônicas, schemas e snapshots controlados para integração entre fontes.
 
-- `pnpm dev`: abre uma previa de desenvolvimento.
-- `pnpm studio`: abre o Remotion Studio.
-- `pnpm typecheck`: verifica se o TypeScript esta correto.
-- `pnpm lint`: verifica padroes de codigo.
-- `pnpm test`: executa testes automatizados.
-- `pnpm build`: prepara o bundle do projeto Remotion.
-- `pnpm render:demo`: renderiza a composicao de exemplo.
+## Governança
 
-## Para que serve cada pasta
-
-- `src/compositions`: videos finais que aparecem no Remotion Studio.
-- `src/scenes`: partes maiores de uma composicao.
-- `src/components`: blocos reutilizaveis de interface e motion.
-- `src/transitions`: efeitos de passagem entre cenas.
-- `src/typography`: estilos e componentes de texto.
-- `src/layouts`: estruturas de tela e posicionamento.
-- `src/themes`: cores, medidas e tokens visuais.
-- `src/utils`: funcoes auxiliares.
-- `public/logos`: logos da Techmarque e marcas aprovadas.
-- `public/fonts`: fontes liberadas para uso no projeto.
-- `public/images`: imagens usadas nos videos.
-- `public/videos`: videos brutos ou materiais de apoio.
-- `public/audio`: musicas, trilhas e efeitos sonoros permitidos.
-- `projects/institutional`: videos institucionais.
-- `projects/products`: videos de produtos.
-- `projects/campaigns`: campanhas comerciais e promocionais.
-- `projects/clients`: materiais especificos de clientes.
-- `tests`: testes automatizados.
-- `scripts`: automacoes e comandos auxiliares.
-- `docs`: documentacao do sistema.
-
-## Seguranca
-
-Nao adicione senhas, tokens, chaves ou credenciais ao repositorio. Use `.env.example` apenas como modelo.
+Leia `AGENTS.md` antes de qualquer alteração. Mudanças devem ocorrer em branch separada e passar por revisão antes de entrar em `main`.

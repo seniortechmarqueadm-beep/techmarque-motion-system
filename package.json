@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Sistema canonico de motion design, Remotion, templates e producao audiovisual da Techmarque.",
+  "description": "Espelho tecnico versionado do sistema local de motion design, Remotion e producao audiovisual da Techmarque.",
   "scripts": {
     "dev": "remotion studio src/index.ts",
     "studio": "remotion studio src/index.ts",

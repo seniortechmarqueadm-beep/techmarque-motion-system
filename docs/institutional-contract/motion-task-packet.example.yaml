@@ -1,0 +1,65 @@
+task_id: TM-MOTION-000
+project: ""
+piece: ""
+version: ""
+mode: implementation
+objective: ""
+
+source_of_truth:
+  project_state: ""
+  decision_ledger: ""
+  visual_dna: ""
+  continuity_pack: ""
+  storyframes: ""
+  local_sync_manifest: ""
+
+inputs: []
+
+locked: []
+controlled: []
+open: []
+
+implementation:
+  engine: Remotion
+  language: TypeScript
+  local_preview: "http://localhost:3000/"
+  editable: true
+  composition_id: ""
+  fps: 30
+  width: 1920
+  height: 1080
+  duration_in_frames: 0
+
+specs:
+  narrative: ""
+  visual: ""
+  motion: ""
+  audio: ""
+  layers: ""
+
+acceptance:
+  - approved_storyframes_preserved
+  - typography_matches_reference
+  - composition_matches_reference
+  - no_clipping
+  - editable_layers
+  - local_preview_verified
+
+validation:
+  required_commands:
+    - pnpm typecheck
+    - pnpm lint
+    - pnpm test
+  render_critical_frames: []
+  mockup_fidelity_gate: true
+  continuity_gate: true
+  production_gate: true
+
+artifacts_expected:
+  - source_files
+  - preview_video
+  - critical_frames
+  - validation_report
+  - state_patch
+
+approval_required: true

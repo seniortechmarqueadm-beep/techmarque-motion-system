@@ -1,0 +1,100 @@
+version: 1.0.0
+updated_at: 2026-07-22
+
+sources:
+  notion:
+    role: institutional_source_of_truth
+    governs:
+      - page_0_reading_protocol
+      - canonical_nodes
+      - areas_and_owners
+      - institutional_logic
+      - commercial_positioning
+      - operational_flows
+    does_not_govern:
+      - signed_obligations
+      - source_code
+      - live_deploy_state
+
+  google_drive:
+    role: formal_document_source_of_truth
+    governs:
+      - contracts
+      - proposals
+      - work_orders
+      - sla
+      - policies
+      - formal_manuals
+    does_not_govern:
+      - source_code
+      - live_local_state
+
+  github:
+    role: technical_versioning_source
+    governs:
+      - versioned_code
+      - schemas
+      - tests
+      - technical_docs
+      - change_history
+      - controlled_snapshots
+    does_not_prove:
+      - unsynchronized_local_files
+      - unexecuted_tests
+      - unpublished_outputs
+
+  vercel:
+    role: published_state_validator
+    governs:
+      - deployments
+      - published_environment
+      - public_runtime_state
+    does_not_govern:
+      - institutional_policy
+      - formal_contracts
+      - local_remotion_state
+
+  local_environment:
+    role: primary_production_workspace
+    governs:
+      - remotion_studio_execution
+      - private_assets
+      - caches
+      - temporary_renders
+      - work_in_progress
+    requires_for_external_proof:
+      - sync_manifest
+      - commit_or_artifact_reference
+      - validation_report
+
+  binding_document:
+    role: concrete_case_decider
+    examples:
+      - contract
+      - work_order
+      - sla
+      - approved_policy
+
+precedence_rules:
+  - when: concrete_formal_conflict
+    order:
+      - binding_document
+      - google_drive
+      - notion
+  - when: technical_capability
+    order:
+      - github
+      - local_environment_evidence
+      - vercel
+      - notion
+  - when: published_state
+    order:
+      - vercel
+      - github
+      - notion
+  - when: institutional_logic
+    order:
+      - notion
+      - google_drive
+      - github
+      - vercel

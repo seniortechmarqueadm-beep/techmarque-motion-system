@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Motion Director Creative Brief",
+  "type": "object",
+  "required": ["creative_id", "objective", "surface", "format", "acceptance"],
+  "properties": {
+    "creative_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,80}$"},
+    "project_id": {"type": "string"},
+    "objective": {"type": "string", "minLength": 8},
+    "audience": {"type": "string"},
+    "surface": {"type": "string", "enum": ["codex_local", "vscode", "remotion", "project", "work"]},
+    "format": {"type": "object", "required": ["width", "height", "fps"], "properties": {"width": {"type": "integer", "minimum": 1}, "height": {"type": "integer", "minimum": 1}, "fps": {"type": "number", "exclusiveMinimum": 0}, "duration_frames": {"type": "integer", "minimum": 1}}, "additionalProperties": false},
+    "locks": {"type": "array", "items": {"type": "string"}},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "references": {"type": "array", "items": {"type": "string"}},
+    "acceptance": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 3}}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,37 @@
+handoff_id: TM-HANDOFF-000
+logical_agent_id: motion-director-techmarque-n7
+from_surface: codex_local
+to_surface: motion-director-techmarque
+project_id: project-slug
+project: project-slug
+task_id: task-slug
+creative_id: creative-slug
+approval_status: proposed
+execution_lane: FAST
+objective: ""
+source_of_truth: []
+inputs: []
+locked: []
+controlled: []
+open: []
+visual_dna: []
+narrative_beats: []
+specs: []
+acceptance: []
+tests: []
+artifacts_expected: []
+production:
+  executor: motion-director-techmarque
+  prompt_requirements: []
+  remotion_modules: []
+  composition:
+    id: ""
+    width: null
+    height: null
+    fps: null
+    duration_in_frames: null
+  studio_strategy: no_open_first
+  render_checks: []
+return_to:
+  surface: codex_local
+  packet: .codex/templates/RETURN_PACKET.yaml

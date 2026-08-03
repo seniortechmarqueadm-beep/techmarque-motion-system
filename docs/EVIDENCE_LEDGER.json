@@ -1,0 +1,19 @@
+{
+  "evidence": [
+    {
+      "evidence_id": "EV-WORKSPACE-001",
+      "project_id": "remotion-agent-workspace",
+      "source_system": "local",
+      "authority_class": "workspace",
+      "object_id": "docs/PROJECT_REGISTRY.yaml",
+      "source_url": "",
+      "query": "local project inventory",
+      "fetched_at": "2026-07-19T00:00:00-03:00",
+      "modified_at": "",
+      "claim": "The workspace contains separately declared Remotion projects with distinct package managers.",
+      "evidence_class": "fact",
+      "limitations": ["Git status is unknown until a valid checkout is available."],
+      "status": "verified"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+gate_report_id: techmarque-foundation-pilot-v1
+object: TechmarqueFoundationPilot
+version: "1.0.0"
+status: PASS
+gates:
+  brief: PASS
+  direction: PASS
+  graph: PASS
+  code: PASS
+  output: PASS
+  continuity: PASS
+  release_parity: PASS
+hard_failures: []
+inspected_frames: [0, 45, 75, 120, 165, 225, 270, 315]
+retest_required: []
+evidence:
+  composition: TechmarqueFoundationPilot
+  dimensions: 1080x1920
+  fps: 30
+  duration_frames: 360
+  duration_seconds: 12
+  render: out/foundation-pilot/techmarque-foundation-pilot.mp4
+  sha256: A338F195E276002795598CC46CF23AA7C3E40ACD9BEE5FAB86C8ABD22D3F6823
+  media_qa: PASS
+  codec_container: mov,mp4,m4a,3gp,3g2,mj2
+  encoded_duration_seconds: 12.053333
+  render_qa_manifest: projects/foundation-pilot/RENDER_QA_MANIFEST.json
+  visual_inspection: PASS
+  studio_preview: PASS
+  inspected_at: 2026-08-03

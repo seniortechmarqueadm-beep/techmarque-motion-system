@@ -1,0 +1,22 @@
+logical_agent_id: motion-director-techmarque-n7
+from_surface: codex_local
+to_surface: remotion
+project_id: null
+task_id: null
+creative_id: null
+status: NOT_RUN
+changed_files: []
+commands: []
+validations: []
+validation: []
+artifacts: []
+visual_deviations: []
+limitations: []
+state_patch: null
+execution_surface: null
+remotion_modules: []
+render_qa:
+  inspected_frames: []
+  still: NOT_RUN
+  preview: NOT_RUN
+  final_render: NOT_RUN

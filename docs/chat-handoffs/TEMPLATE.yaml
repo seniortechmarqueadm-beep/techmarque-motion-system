@@ -1,0 +1,17 @@
+handoff_id: ""
+thread_id: ""
+project_id: ""
+captured_at: ""
+user_intent: ""
+approved_decisions: []
+assistant_recommendations: []
+locked_changes: []
+controlled_changes: []
+open_questions: []
+source_refs: []
+state_patch_ref: ""
+memory_candidates: []
+next_actions: []
+approval_status: proposed
+raw_chat_location: external
+redaction_status: checked

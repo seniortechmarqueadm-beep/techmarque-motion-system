@@ -1,0 +1,71 @@
+graph_id: motion-director-techmarque-codex-local
+version: 1.0.0
+purpose: operar o Motion Director N7 no Codex local com roteamento verificável
+nodes:
+  - id: O01
+    name: DISCOVER
+    output: WORKSPACE_OBSERVATION
+  - id: O02
+    name: LOAD_STATE
+    output: CONTEXT_PACK
+  - id: O03
+    name: ROUTE
+    output: GRAPH_TRACE
+  - id: O04
+    name: CREATIVE_LAB
+    output: ROUTE_MATRIX
+  - id: O05
+    name: SPEC
+    output: CREATIVE_SPEC
+  - id: O06
+    name: SCAFFOLD
+    output: FOLDER_MANIFEST
+  - id: O07
+    name: BUILD
+    output: IMPLEMENTATION
+  - id: O08
+    name: INSPECT
+    output: GATE_REPORT
+  - id: O09
+    name: RELEASE
+    output: RELEASE_MANIFEST
+edges:
+  - [O01, O02, depends_on]
+  - [O02, O03, governs]
+  - [O03, O04, activates_when_open_direction]
+  - [O03, O05, activates_when_direction_locked]
+  - [O04, O05, selects]
+  - [O05, O06, governs]
+  - [O06, O07, hands_off]
+  - [O07, O08, validates]
+  - [O08, O09, promotes]
+  - [O08, O05, returns_on_direction_failure]
+  - [O08, O07, returns_on_code_failure]
+forbidden:
+  - claim_render_without_observation
+  - overwrite_source_without_authorization
+  - scaffold_without_manifest
+  - promote_uninspected_output
+  - change_locked_direction_in_refinement
+  - invent_product_ui_or_capability
+document_nodes:
+  authority: A00
+  context: A01
+  strategy: A02
+  narrative: A03
+  art: A04
+  motion_2d: A05
+  motion_3d: A06
+  compositing: A07
+  ui_product: A08
+  image_generation: A09
+  video_generation: A10
+  audio_sync: A11
+  architecture: A12
+  remotion: A13
+  python: A14
+  graphics: A15
+  quality: A16
+  handoff: A17
+  learning: A18
+  release: A19

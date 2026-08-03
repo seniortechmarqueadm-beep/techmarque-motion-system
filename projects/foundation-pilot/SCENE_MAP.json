@@ -1,0 +1,9 @@
+{
+  "composition": "TechmarqueFoundationPilot",
+  "scenes": [
+    {"id": "signal", "start": 0, "end": 75, "review_frame": 45},
+    {"id": "direction", "start": 75, "end": 165, "review_frame": 120},
+    {"id": "production", "start": 165, "end": 270, "review_frame": 225},
+    {"id": "resolution", "start": 270, "end": 360, "review_frame": 315}
+  ]
+}

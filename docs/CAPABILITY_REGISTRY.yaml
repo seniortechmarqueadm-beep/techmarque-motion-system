@@ -1,0 +1,15 @@
+platform: local-runtime
+mode: workspace-operations
+verified_at: "2026-07-19T17:35:00-03:00"
+source: "local runtime audit and successful Remotion validation"
+permission: write
+inputs: ["workspace files", "Node runtime"]
+controls: ["explicit project registry", "non-destructive defaults"]
+limits: ["canonical OneDrive workspace cannot write .git reliably", "OneDrive synchronization may affect execution"]
+syntax: "PowerShell plus bundled Node runtime"
+retry_policy: "classify and retry only after environment change"
+cache_ttl: "24h for environment preflight"
+pagination: "not-applicable"
+known_failures: ["plain git and node are absent from default PATH", "OneDrive recreates an empty .git marker and denies valid git init inside the canonical workspace"]
+fallback: "bundled Codex runtime paths and named non-synced execution roots"
+adapter: "local-shell-runtime"

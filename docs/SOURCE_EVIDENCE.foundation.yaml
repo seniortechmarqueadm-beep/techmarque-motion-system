@@ -1,0 +1,32 @@
+evidence_id: TM-EVIDENCE-FOUNDATION-2026-08-03
+observed_at: "2026-08-03"
+classification: partial_audit
+facts:
+  - source: notion
+    object_id: "36d10ec4-643a-80da-9534-e2e33a4f9740"
+    title: "0- MANIFESTO INSTITUCIONAL"
+    authority: institutional_control
+  - source: notion
+    object_id: "3a410ec4-643a-8108-b12d-d6702a179df6"
+    title: "0.2 — MAPA DE FONTES DA VERDADE"
+    authority: source_prevalence
+  - source: notion
+    object_id: "3a410ec4-643a-819f-b9a1-fc298e0be05b"
+    title: "0.5 — REGRAS PARA AGENTES E ATUALIZAÇÕES"
+    authority: update_governance
+  - source: notion
+    object_id: "3a510ec4-643a-8147-aa68-ea6d011ac9e1"
+    title: "5- Engenharia e Operações"
+    authority: technical_node
+  - source: github
+    object_id: "seniortechmarqueadm-beep/techmarque-motion-system"
+    title: "Techmarque Motion System"
+    authority: versioned_implementation
+  - source: google_drive
+    object_id: "1UEj4vkhRuuUi-LoYTwxFZjoW9NC5PG74"
+    title: "Contexto Geral da Techmarque.txt"
+    authority: supporting_document
+limitations:
+  - "A pasta Drive TECHMARQUE - ENGENHARIA (5) retornou vazia pelo conector em 2026-08-03."
+  - "Os documentos de logo do Drive retornaram metadados, mas conteúdo textual vazio."
+  - "GitHub comprova versionamento, não Studio, render ou operação viva."

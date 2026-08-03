@@ -1,0 +1,19 @@
+creative_id: techmarque-foundation-pilot
+version: "1.0.0"
+status: approved_for_internal_pilot
+problem: "Provar que o agente converte uma intenção em direção, código e render verificável."
+audience: "equipe interna Techmarque e operadores do sistema de motion"
+message: "A qualidade nasce da passagem controlada entre ideia, direção e execução."
+action: "usar o fluxo canônico em toda nova produção"
+evidence:
+  - "TASK_HANDOFF aprovado"
+  - "composição registrada no Remotion"
+  - "stills e render inspecionados"
+route:
+  name: "Sinal para Sistema"
+  strategic_fit: high
+  brand_specificity: high
+  production_cost: low
+  generative_risk: none
+visual_thesis: "Um ponto vermelho ganha estrutura editorial até se tornar um sistema técnico completo."
+cta: "DA IDEIA AO CRIATIVO COMPLETO."

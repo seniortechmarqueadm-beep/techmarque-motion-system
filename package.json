@@ -13,7 +13,15 @@
     "build": "remotion bundle src/index.ts out/bundle",
     "render:demo": "remotion render src/index.ts TechmarqueMotionDemo out/techmarque-motion-demo.mp4",
     "render:opportunity": "remotion render src/index.ts TechmarqueOpportunityPath out/techmarque-opportunity-path.mp4",
-    "still:opportunity": "remotion still src/index.ts TechmarqueOpportunityPath out/techmarque-opportunity-path-frame.png --frame=900"
+    "still:opportunity": "remotion still src/index.ts TechmarqueOpportunityPath out/techmarque-opportunity-path-frame.png --frame=900",
+    "render:foundation": "remotion render src/index.ts TechmarqueFoundationPilot out/foundation-pilot/techmarque-foundation-pilot.mp4",
+    "still:foundation": "remotion still src/index.ts TechmarqueFoundationPilot out/foundation-pilot/techmarque-foundation-pilot-cta.png --frame=315",
+    "discover:motion": "node scripts/discover-workspace.mjs .",
+    "route:motion": "node scripts/route-request.mjs",
+    "plan:motion": "node scripts/plan-creative.mjs",
+    "score:motion": "node scripts/score-routes.mjs",
+    "scaffold:motion": "node scripts/scaffold-creative.mjs",
+    "validate:motion": "node scripts/validate-codex-pack.mjs"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.485",

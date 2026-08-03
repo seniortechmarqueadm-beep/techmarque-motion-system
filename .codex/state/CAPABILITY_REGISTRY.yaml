@@ -1,0 +1,23 @@
+registry_id: motion-director-capability-registry
+version: 1
+capabilities:
+  codex_local:
+    declared: true
+    proven: true
+    evidence: package-local
+  workspace_discovery:
+    declared: true
+    proven: true
+    evidence: scripts/discover-workspace.mjs PASS on 2026-08-03
+  remotion_studio:
+    declared: true
+    proven: true
+    evidence: HTTP 200; TechmarqueFoundationPilot selected and preview playback verified in Remotion Studio on 2026-08-03
+  visual_render_inspection:
+    declared: true
+    proven: true
+    evidence: projects/foundation-pilot/GATE_REPORT.yaml and 8 inspected frames
+  external_connectors:
+    declared: true
+    proven: true
+    evidence: Notion 36d10ec4-643a-80da-9534-e2e33a4f9740; GitHub seniortechmarqueadm-beep/techmarque-motion-system; Drive 1xd-bInXf30SonS1MKoS0awDtJ2z55swj

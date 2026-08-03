@@ -1,0 +1,33 @@
+registry_version: "1.0.0"
+workspace_root: ".."
+projects:
+  - id: techmarque-motion-system
+    canonical_root: "."
+    execution_root: "C:/Users/allan/Documents/Codex/techmarque-motion-system"
+    package_manager: pnpm
+    composition_ids: ["TechmarqueFoundationPilot", "TechmarqueMotionDemo", "TechmarqueOpportunityPath", "TechmarqueMatteOpportunity"]
+    project_state: ".codex/state/PROJECT_STATE.yaml"
+    source_authority: ["AGENTS.md", "CODEX_LOCAL_MANIFEST.yaml", ".codex/state", "docs/FOUNDATION_OPERATING_BASELINE.md"]
+    git_status: execution-root-valid
+    sync_mode: canonical-onedrive-execution-git
+    status: active
+  - id: techmarque-remotion-final-v1
+    canonical_root: "TECHMARQUE_REMOTION_FINAL_V1"
+    execution_root: "C:/Users/allan/.codex/execution-roots/techmarque-remotion-final-v1"
+    package_manager: npm
+    composition_ids: ["TechmarqueOpportunityFinal"]
+    project_state: "PROJECT_STATE.md"
+    source_authority: ["PROJECT_STATE.md", "AGENTS.md", "docs/work-memory"]
+    git_status: execution-root-valid
+    sync_mode: onedrive
+    status: active
+  - id: techmarque-reel-busca-orcamento
+    canonical_root: "techmarque-reel-da-busca-ao-orcamento-final/techmarque-reel-da-busca-ao-orcamento"
+    execution_root: ""
+    package_manager: pnpm
+    composition_ids: ["TechmarqueMarmorariaFluxo"]
+    project_state: "PROJECT_STATE.md"
+    source_authority: ["PRODUCAO-CRIATIVA.md", "docs/work-memory"]
+    git_status: unknown
+    sync_mode: onedrive
+    status: active

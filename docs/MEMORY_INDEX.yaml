@@ -1,0 +1,19 @@
+index_version: "1.0.0"
+project_id: remotion-agent-workspace
+records:
+  - id: TM-MEM-ENV-001
+    type: environment
+    scope: project
+    status: verified
+    file: "TECHMARQUE_REMOTION_FINAL_V1/docs/MEMORY_RECORDS/TM-MEM-ENV-001.yaml"
+    observed_at: "2026-07-19T00:00:00-03:00"
+    review_at: "2026-07-26T00:00:00-03:00"
+    tags: ["remotion", "npm", "onedrive"]
+  - id: TM-MEM-DIR-001
+    type: decision
+    scope: project
+    status: verified
+    file: "TECHMARQUE_REMOTION_FINAL_V1/docs/MEMORY_RECORDS/TM-MEM-DIR-001.yaml"
+    observed_at: "2026-07-19T00:00:00-03:00"
+    review_at: "2026-08-19T00:00:00-03:00"
+    tags: ["voice-led", "deterministic-ui", "cta"]

@@ -1,0 +1,6 @@
+[
+  {"id": "path_escape", "expected": "BLOCKED", "reason": "scaffold nunca pode sair do root autorizado"},
+  {"id": "collision", "expected": "BLOCKED", "reason": "scaffold não sobrescreve pasta ou arquivo existente"},
+  {"id": "missing_write_flag", "expected": "DRY_RUN", "reason": "planejamento não altera filesystem sem --write"},
+  {"id": "identity_contamination", "expected": "FAIL", "reason": "identity do Criador de Prompts não pode substituir Motion Director"}
+]

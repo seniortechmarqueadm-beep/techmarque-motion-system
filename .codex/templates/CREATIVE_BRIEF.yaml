@@ -1,0 +1,19 @@
+creative_id: sf00-example
+project_id: techmarque-campaign
+objective: tornar uma dor operacional visível e conduzir para um próximo passo
+audience: público definido no briefing
+surface: remotion
+format:
+  width: 1080
+  height: 1920
+  fps: 30
+  duration_frames: 360
+locks: []
+constraints:
+  - texto e UI devem ser determinísticos
+  - formato vertical 9:16
+references: []
+acceptance:
+  - tese compreensível sem explicação externa
+  - continuidade preservada entre cenas
+  - output inspecionado nos frames críticos

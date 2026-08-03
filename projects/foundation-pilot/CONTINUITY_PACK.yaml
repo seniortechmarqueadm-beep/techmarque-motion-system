@@ -1,0 +1,28 @@
+continuity_id: techmarque-foundation-pilot-v1
+status: locked_for_pilot
+sequence:
+  - id: signal
+    frames: [0, 74]
+    owner_of_motion: red_signal
+    initial_state: "grid vazio"
+    final_state: "ideia reconhecida"
+  - id: structure
+    frames: [75, 164]
+    owner_of_motion: direction_cards
+    initial_state: "sinal sem processo"
+    final_state: "raciocínio, roteiro e estrutura ordenados"
+  - id: production
+    frames: [165, 269]
+    owner_of_motion: handoff_panel
+    initial_state: "direção aprovada"
+    final_state: "Remotion pronto para render"
+  - id: resolution
+    frames: [270, 359]
+    owner_of_motion: brand_resolution
+    initial_state: "produção técnica"
+    final_state: "criativo completo"
+continuity_locks:
+  - "paper/graphite permanece entre cenas"
+  - "vermelho conserva o papel de sinal/decisão"
+  - "movimento progride de ponto para bloco para sistema"
+  - "CTA é consequência da narrativa"

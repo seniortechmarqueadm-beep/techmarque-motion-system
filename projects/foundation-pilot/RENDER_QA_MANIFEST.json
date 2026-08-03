@@ -1,0 +1,66 @@
+{
+  "composition_id": "TechmarqueFoundationPilot",
+  "version": "1.0.0",
+  "fps": 30,
+  "duration_in_frames": 360,
+  "strategy": "scene-aware",
+  "frames": [
+    {
+      "role": "opening",
+      "frame": 0,
+      "status": "pass"
+    },
+    {
+      "role": "scene:signal",
+      "frame": 45,
+      "status": "pass"
+    },
+    {
+      "role": "transition:direction",
+      "frame": 75,
+      "status": "pass"
+    },
+    {
+      "role": "scene:direction",
+      "frame": 120,
+      "status": "pass"
+    },
+    {
+      "role": "transition:production",
+      "frame": 165,
+      "status": "pass"
+    },
+    {
+      "role": "scene:production",
+      "frame": 225,
+      "status": "pass"
+    },
+    {
+      "role": "transition:resolution",
+      "frame": 270,
+      "status": "pass"
+    },
+    {
+      "role": "scene:resolution",
+      "frame": 315,
+      "status": "pass"
+    }
+  ],
+  "artifacts": [
+    "out/foundation-pilot/frame-000.png",
+    "out/foundation-pilot/frame-045.png",
+    "out/foundation-pilot/frame-075.png",
+    "out/foundation-pilot/frame-120.png",
+    "out/foundation-pilot/frame-165.png",
+    "out/foundation-pilot/frame-225.png",
+    "out/foundation-pilot/frame-270.png",
+    "out/foundation-pilot/frame-315.png",
+    "out/foundation-pilot/techmarque-foundation-pilot.mp4"
+  ],
+  "inspection": {
+    "status": "pass",
+    "inspected_at": "2026-08-03",
+    "inspected_by": "motion-director-techmarque-n7",
+    "issues": []
+  }
+}

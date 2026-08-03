@@ -3,6 +3,7 @@ node_modules*/
 .pnpm-techmarque-reel/
 work/
 dist/
+build/
 out/
 coverage/
 .env

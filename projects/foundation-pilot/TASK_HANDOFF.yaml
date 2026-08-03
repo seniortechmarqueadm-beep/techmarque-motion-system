@@ -1,0 +1,91 @@
+handoff_id: TM-HANDOFF-FOUNDATION-001
+logical_agent_id: motion-director-techmarque-n7
+from_surface: codex_local
+to_surface: motion-director-techmarque
+project_id: techmarque-motion-system
+project: techmarque-motion-system
+task_id: operational-foundation-v1-1
+creative_id: techmarque-foundation-pilot
+approval_status: approved
+execution_lane: DEEP
+objective: "Provar o ciclo completo do agente com um filme vertical determinístico de 12 segundos, do raciocínio ao render."
+source_of_truth:
+  - "Notion 0- MANIFESTO INSTITUCIONAL: 36d10ec4-643a-80da-9534-e2e33a4f9740"
+  - "Notion 0.2 MAPA DE FONTES DA VERDADE: 3a410ec4-643a-8108-b12d-d6702a179df6"
+  - "Notion 0.5 REGRAS PARA AGENTES E ATUALIZAÇÕES: 3a410ec4-643a-819f-b9a1-fc298e0be05b"
+  - "Notion 5- Engenharia e Operações: 3a510ec4-643a-8147-aa68-ea6d011ac9e1"
+  - "GitHub: seniortechmarqueadm-beep/techmarque-motion-system"
+  - "CODEX_LOCAL_MANIFEST.yaml v1.1.0"
+inputs:
+  - "public/logos/techmarque-symbol-red.png"
+  - "src/themes/defaultTheme.ts"
+  - "projects/foundation-pilot/VISUAL_DNA.yaml"
+locked:
+  - "marca Techmarque e símbolo oficial local"
+  - "canvas 1080x1920, 30 fps, 360 frames"
+  - "mensagem final: DA IDEIA AO CRIATIVO COMPLETO."
+  - "nenhuma dependência de mídia remota"
+controlled:
+  - "timing pode variar somente dentro das quatro cenas contíguas"
+  - "tipografia usa a pilha local aprovada e deve permanecer legível em tela móvel"
+  - "vermelho é acento; fundo principal permanece paper/graphite"
+open:
+  - "micro-movimento de entrada e saída"
+  - "densidade decorativa do grid"
+visual_dna:
+  - "precisão editorial"
+  - "contraste paper/graphite"
+  - "vermelho como sinal e decisão"
+  - "geometria modular"
+narrative_beats:
+  - "sinal: uma ideia isolada"
+  - "direção: raciocínio, roteiro e estrutura"
+  - "produção: handoff aprovado e Remotion"
+  - "resolução: criativo completo"
+specs:
+  - "composição determinística em React/Remotion"
+  - "animações somente por frame com interpolate/Easing"
+  - "safe area mínima de 96 px"
+acceptance:
+  - "typecheck, lint, testes e bundle sem falha de código"
+  - "stills dos frames 0, 45, 120, 225 e 315 gerados e inspecionados"
+  - "render MP4 completo gerado e metadados verificados"
+  - "nenhum texto cortado, asset ausente ou transição quebrada"
+tests:
+  - "tests/foundation-pilot.test.ts"
+  - "pnpm typecheck"
+  - "pnpm lint"
+  - "pnpm test"
+  - "pnpm build"
+  - "pnpm render:foundation"
+artifacts_expected:
+  - "out/foundation-pilot/techmarque-foundation-pilot.mp4"
+  - "out/foundation-pilot/frame-000.png"
+  - "out/foundation-pilot/frame-045.png"
+  - "out/foundation-pilot/frame-120.png"
+  - "out/foundation-pilot/frame-225.png"
+  - "out/foundation-pilot/frame-315.png"
+production:
+  executor: motion-director-techmarque
+  prompt_requirements:
+    - "preservar os locks e registrar qualquer desvio"
+  remotion_modules:
+    - remotion-markup
+    - remotion-interactivity
+    - remotion-render
+  composition:
+    id: TechmarqueFoundationPilot
+    width: 1080
+    height: 1920
+    fps: 30
+    duration_in_frames: 360
+  studio_strategy: no_open_first
+  render_checks:
+    - opening
+    - first_reveal
+    - densest_ui
+    - transition
+    - cta
+return_to:
+  surface: codex_local
+  packet: projects/foundation-pilot/RETURN_PACKET.yaml

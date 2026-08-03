@@ -1,0 +1,69 @@
+manifest_id: motion-director-techmarque-codex-local
+version: 1.1.0
+agent_id: motion-director-techmarque-n7
+surface: codex_local
+entrypoint: AGENTS.md
+identity_source: .codex/state/AGENT_IDENTITY.yaml
+graph: .codex/graphs/motion-director-local.yaml
+instructions:
+  - .codex/instructions/01_identity-authority.md
+  - .codex/instructions/02_routing-and-modes.md
+  - .codex/instructions/03_creative-lab.md
+  - .codex/instructions/04_workspace-and-studio.md
+  - .codex/instructions/05_new-creative-lifecycle.md
+  - .codex/instructions/06_remotion-engineering.md
+  - .codex/instructions/07_quality-release.md
+  - .codex/instructions/08_handoff-state.md
+  - .codex/instructions/09_productivity.md
+  - .codex/instructions/10-direction-execution-bridge.md
+state:
+  - .codex/state/PROJECT_STATE.yaml
+  - .codex/state/DECISION_LEDGER.yaml
+  - .codex/state/CAPABILITY_REGISTRY.yaml
+  - .codex/state/GRAPH_TRACE.yaml
+schemas:
+  - .codex/schemas/creative-brief.schema.json
+  - .codex/schemas/creative-route.schema.json
+  - .codex/schemas/folder-manifest.schema.json
+  - .codex/schemas/return-packet.schema.json
+  - .codex/schemas/task-handoff.schema.json
+bridge:
+  direction_owner: codex_local
+  execution_owner: motion-director-techmarque
+  production_worker: motion-director-techmarque
+  activation: automatic_for_motion_requests
+  approved_packet: .codex/templates/TASK_HANDOFF.yaml
+  return_packet: .codex/templates/RETURN_PACKET.yaml
+  reopen_direction_only_when:
+    - handoff_missing_or_invalid
+    - locked_decision_technically_impossible
+    - explicit_user_request
+integrations:
+  remotion_plugin:
+    router: remotion-best-practices
+    role: markup_studio_render_specialist
+  motion_director_skill:
+    role: prompt_code_asset_and_creative_executor
+scripts:
+  - scripts/discover-workspace.mjs
+  - scripts/route-request.mjs
+  - scripts/plan-creative.mjs
+  - scripts/score-routes.mjs
+  - scripts/scaffold-creative.mjs
+  - scripts/validate-codex-pack.mjs
+source_policy:
+  docx_role: domain_reference
+  load_strategy: selective
+  never_claim_unread_source: true
+  expected_docx_roots:
+    - ../MOTION_DIRECTOR_TECHMARQUE_v3_2/anexos
+    - ./anexos
+    - ./docs/n7
+states:
+  - DRAFT
+  - DOCUMENTAL
+  - SCAFFOLD
+  - PILOT
+  - ACTIVE
+  - BLOCKED
+  - RETIRED

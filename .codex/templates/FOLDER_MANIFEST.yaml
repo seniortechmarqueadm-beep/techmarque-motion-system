@@ -1,0 +1,18 @@
+root: /absolute/path/to/workspace
+creative_id: sf00-example
+mode: adapt_existing
+operations:
+  - op: CREATE_DIR
+    path: 00_admin
+    reason: registrar estado e decisões
+  - op: CREATE_DIR
+    path: 03_direction/storyframes
+    reason: separar direção de assets
+  - op: CREATE_FILE
+    path: 00_admin/PROJECT_STATE.yaml
+    reason: estado inicial do criativo
+safety:
+  dry_run: true
+  allow_write: false
+  collisions_checked: true
+  path_escape_checked: true

@@ -1,0 +1,17 @@
+ledger_id: motion-director-decision-ledger
+version: 1
+decisions:
+  - id: D-2026-08-03-001
+    status: accepted
+    decision: GitHub is the canonical technical versioning surface for techmarque-motion-system.
+    evidence: explicit user decision and Notion layer 5 engineering governance
+  - id: D-2026-08-03-002
+    status: accepted
+    decision: The local Codex package owns discovery direction and decision; motion-director-techmarque owns specialized implementation render and QA.
+    evidence: explicit user operating model
+  - id: D-2026-08-03-003
+    status: accepted
+    decision: Execution runs from a valid checkout outside OneDrive while the OneDrive workspace remains the canonical local project mirror.
+    evidence: explicit request to conclude the operational foundation and observed OneDrive EPERM risk
+superseded: []
+rule: only explicit and reviewed decisions enter this file

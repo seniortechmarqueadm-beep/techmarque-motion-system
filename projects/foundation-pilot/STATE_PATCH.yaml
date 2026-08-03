@@ -1,0 +1,12 @@
+patch_id: foundation-operational-v1-1
+project_id: techmarque-motion-system
+creative_id: techmarque-foundation-pilot
+applied_at: 2026-08-03
+changes:
+  release_state: READY_FOR_REVIEW
+  remotion_status: PROVEN
+  active_route: signal-to-system
+evidence:
+  - projects/foundation-pilot/GATE_REPORT.yaml
+  - projects/foundation-pilot/RENDER_QA_MANIFEST.json
+  - out/foundation-pilot/techmarque-foundation-pilot.mp4

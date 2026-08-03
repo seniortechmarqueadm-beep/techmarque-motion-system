@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Motion Director Return Packet",
+  "type": "object",
+  "required": ["logical_agent_id", "from_surface", "to_surface", "status", "changed_files", "validations", "limitations"],
+  "properties": {
+    "logical_agent_id": {"type": "string"},
+    "from_surface": {"type": "string"},
+    "to_surface": {"type": "string"},
+    "project_id": {"type": "string"},
+    "task_id": {"type": "string"},
+    "creative_id": {"type": ["string", "null"]},
+    "status": {"type": "string", "enum": ["PASS", "FAIL", "BLOCKED", "RETEST", "NOT_RUN"]},
+    "changed_files": {"type": "array", "items": {"type": "string"}},
+    "commands": {"type": "array", "items": {"type": "string"}},
+    "validations": {"type": "array", "items": {"type": "string"}},
+    "validation": {"type": "array", "items": {"type": "string"}},
+    "artifacts": {"type": "array", "items": {"type": "string"}},
+    "visual_deviations": {"type": "array", "items": {"type": "string"}},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "state_patch": {"type": ["object", "null"]},
+    "execution_surface": {"type": ["string", "null"]},
+    "remotion_modules": {"type": "array", "items": {"type": "string"}},
+    "render_qa": {"type": "object"}
+  },
+  "additionalProperties": false
+}

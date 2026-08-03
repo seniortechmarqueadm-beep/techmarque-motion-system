@@ -1,0 +1,34 @@
+{
+  "routes": [
+    {
+      "route_id": "materialize-path",
+      "operator": "MATERIALIZE",
+      "thesis": "A oportunidade vira um objeto visível que pode avançar ou ficar parado.",
+      "mechanism": "O objeto atravessa estados de operação e revela o custo da interrupção.",
+      "translation": "Objeto vermelho determinístico, UI modular e transições causais.",
+      "signature": "A lógica de caminho é representada pelo próprio sistema visual.",
+      "mvp": "Três estados em 2D.",
+      "premium": "Sistema completo com áudio, UI e adaptação de formatos.",
+      "fallback": "Sem geração de imagem; tudo em Remotion.",
+      "editability": "alta",
+      "repeatability": "alta",
+      "risks": ["exige continuidade rigorosa"],
+      "scores": {"brand": 5, "novelty": 4, "clarity": 5, "feasibility": 4, "editability": 5, "risk": 2}
+    },
+    {
+      "route_id": "generic-dashboard",
+      "operator": "TRANSFER",
+      "thesis": "Uma interface futurista mostra uma operação mais inteligente.",
+      "mechanism": "Painéis e gráficos aparecem em sequência.",
+      "translation": "Dashboard escuro com glow e partículas.",
+      "signature": "Nenhuma assinatura específica.",
+      "mvp": "Dashboard genérico.",
+      "premium": "Dashboard com mais efeitos.",
+      "fallback": "Imagem estática.",
+      "editability": "média",
+      "repeatability": "baixa",
+      "risks": ["pode pertencer a qualquer empresa", "UI decorativa"],
+      "scores": {"brand": 1, "novelty": 1, "clarity": 2, "feasibility": 3, "editability": 3, "risk": 5}
+    }
+  ]
+}

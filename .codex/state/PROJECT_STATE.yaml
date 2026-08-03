@@ -1,0 +1,16 @@
+project_id: techmarque-motion-system
+creative_id: techmarque-foundation-pilot
+surface: project
+state: ACTIVE
+release_state: READY_FOR_REVIEW
+remotion_status: PROVEN
+source_of_truth: .codex/state
+locks: []
+open_decisions: []
+active_route: signal-to-system
+last_validated: 2026-08-03
+documentation_version: 1.1.0
+limitations:
+  - Execution of Studio, tests and render is isolated at C:/Users/allan/Documents/Codex/techmarque-motion-system to avoid OneDrive EPERM.
+  - The pilot is intentionally silent; the audio standard is documented for production creatives.
+  - The connected Drive engineering folder returned zero indexed files on 2026-08-03.

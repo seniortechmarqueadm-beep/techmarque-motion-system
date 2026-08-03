@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Motion Director direction-to-execution handoff",
+  "type": "object",
+  "required": ["handoff_id", "logical_agent_id", "from_surface", "to_surface", "project_id", "task_id", "creative_id", "approval_status", "execution_lane", "objective", "source_of_truth", "locked", "controlled", "open", "specs", "acceptance", "tests", "artifacts_expected", "return_to"],
+  "properties": {
+    "handoff_id": {"type": "string"},
+    "logical_agent_id": {"type": "string"},
+    "from_surface": {"const": "codex_local"},
+    "to_surface": {"const": "motion-director-techmarque"},
+    "project_id": {"type": "string"},
+    "project": {"type": ["string", "object"]},
+    "task_id": {"type": "string"},
+    "creative_id": {"type": "string"},
+    "approval_status": {"enum": ["proposed", "approved", "superseded", "blocked"]},
+    "execution_lane": {"enum": ["FAST", "STANDARD", "DEEP"]},
+    "objective": {"type": "string"},
+    "source_of_truth": {"type": "array"},
+    "inputs": {"type": "array"},
+    "locked": {"type": "array"},
+    "controlled": {"type": "array"},
+    "open": {"type": "array"},
+    "visual_dna": {"type": "array"},
+    "narrative_beats": {"type": "array"},
+    "specs": {"type": "array"},
+    "acceptance": {"type": "array"},
+    "tests": {"type": "array"},
+    "artifacts_expected": {"type": "array"},
+    "production": {
+      "type": "object",
+      "properties": {
+        "executor": {"const": "motion-director-techmarque"},
+        "prompt_requirements": {"type": "array"},
+        "remotion_modules": {"type": "array", "items": {"type": "string"}},
+        "composition": {"type": "object"},
+        "studio_strategy": {"type": "string"},
+        "render_checks": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "return_to": {"type": "object", "required": ["surface", "packet"]}
+  },
+  "additionalProperties": false
+}

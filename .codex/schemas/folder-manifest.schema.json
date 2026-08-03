@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Motion Director Folder Manifest",
+  "type": "object",
+  "required": ["root", "creative_id", "mode", "operations"],
+  "properties": {
+    "root": {"type": "string", "minLength": 1},
+    "creative_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,80}$"},
+    "mode": {"type": "string", "enum": ["new_project", "adapt_existing"]},
+    "operations": {"type": "array", "items": {"type": "object", "required": ["op", "path"], "properties": {"op": {"type": "string", "enum": ["CREATE_DIR", "CREATE_FILE", "ADAPT", "SKIP_COLLISION"]}, "path": {"type": "string", "minLength": 1}, "reason": {"type": "string"}, "content": {"type": "string"}}, "additionalProperties": false}},
+    "safety": {"type": "object", "properties": {"dry_run": {"type": "boolean"}, "allow_write": {"type": "boolean"}, "collisions_checked": {"type": "boolean"}, "path_escape_checked": {"type": "boolean"}}, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

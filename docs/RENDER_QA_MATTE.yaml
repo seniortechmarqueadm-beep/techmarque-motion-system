@@ -1,0 +1,21 @@
+composition: TechmarqueMatteOpportunity
+status: pending-local-studio
+reason: >-
+  The current sandbox cannot spawn esbuild or Vitest workers from the OneDrive workspace.
+  The elevated validation request was unavailable because the workspace has no execution credits.
+critical_frames:
+  - frame: 30
+    scene: "Opening: opportunity signal"
+  - frame: 240
+    scene: "WhatsApp dispersion"
+  - frame: 600
+    scene: "Marmoraria journey"
+  - frame: 1410
+    scene: "Opportunity central"
+  - frame: 1890
+    scene: "CTA and Techmarque brand"
+acceptance:
+  - "No red character is repeated across scenes."
+  - "Red route is the continuity anchor."
+  - "Critical copy is legible inside the 1080x1920 safe area."
+  - "Brand and CTA appear only in the closing scene."

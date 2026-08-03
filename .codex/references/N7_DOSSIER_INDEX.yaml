@@ -1,0 +1,33 @@
+index_id: motion-director-n7-local-reference-index
+version: 3.2
+authority: domain_reference_only
+source_roots:
+  - ../MOTION_DIRECTOR_TECHMARQUE_v3_2/anexos
+  - ./anexos
+  - ./docs/n7
+loader_rules:
+  - load_only_relevant_nodes
+  - load_predecessor_when_output_depends_on_it
+  - record_loaded_nodes_and_paths
+  - never_claim_unread_docx
+nodes:
+  - {id: A00, file: 00_MANIFESTO_AUTORIDADE_GRAFO_E_ROTEAMENTO_v3_2.docx, activate_for: [authority, routing, conflict, release]}
+  - {id: A01, file: 01_CONTEXTO_ESTADO_E_RESPONSE_GOVERNOR_v3_2.docx, activate_for: [context, state, mode, response]}
+  - {id: A02, file: 02_ESTRATEGIA_MARCA_E_EVIDENCE_BRIDGE_v3_2.docx, activate_for: [strategy, brand, evidence, campaign]}
+  - {id: A03, file: 03_NARRATIVA_ROTEIRO_E_STORYBOARD_v3_2.docx, activate_for: [script, storyboard, beats, storyframes]}
+  - {id: A04, file: 04_DIRECAO_DE_ARTE_STYLEFRAMES_E_STORYFRAMES_v3_2.docx, activate_for: [styleframe, storyframe, composition, visual_dna]}
+  - {id: A05, file: 05_MOTION_2D_E_KINETIC_SYSTEMS_v3_2.docx, activate_for: [motion_2d, typography, easing, timing]}
+  - {id: A06, file: 06_MOTION_3D_CAMERA_LUZ_E_RENDER_v3_2.docx, activate_for: [3d, camera, light, render]}
+  - {id: A07, file: 07_COMPOSITING_VFX_E_COLOR_v3_2.docx, activate_for: [compositing, vfx, alpha, color]}
+  - {id: A08, file: 08_UI_PRODUTO_CRM_E_DADOS_v3_2.docx, activate_for: [ui, crm, product, data]}
+  - {id: A09, file: 09_DIRECAO_DE_IMAGEM_GENERATIVA_v3_2.docx, activate_for: [image_generation, image_edit, plate]}
+  - {id: A10, file: 10_DIRECAO_DE_VIDEO_GENERATIVO_v3_2.docx, activate_for: [video_generation, temporal, i2v, t2v]}
+  - {id: A11, file: 11_AUDIO_VOZ_SYNC_E_SOUND_DESIGN_v3_2.docx, activate_for: [audio, voice, sync, sound]}
+  - {id: A12, file: 12_ARQUITETURA_DE_SOFTWARE_E_MOTION_SYSTEMS_v3_2.docx, activate_for: [architecture, state_bridge, services]}
+  - {id: A13, file: 13_TYPESCRIPT_REACT_E_REMOTION_v3_2.docx, activate_for: [typescript, react, remotion, composition]}
+  - {id: A14, file: 14_PYTHON_E_AUTOMACAO_DE_MIDIA_v3_2.docx, activate_for: [python, batch, media_automation]}
+  - {id: A15, file: 15_GRAPHICS_WEBGL_THREE.JS_E_FFMPEG_v3_2.docx, activate_for: [webgl, threejs, shader, ffmpeg]}
+  - {id: A16, file: 16_CONTINUIDADE_RED_TEAM_E_QUALITY_GATES_v3_2.docx, activate_for: [qa, continuity, red_team, fidelity]}
+  - {id: A17, file: 17_WORK_CODEX_HANDOFFS_E_PLATFORM_ADAPTERS_v3_2.docx, activate_for: [handoff, codex, vscode, adapters]}
+  - {id: A18, file: 18_TESTES_BENCHMARKS_E_APRENDIZADO_v3_2.docx, activate_for: [tests, benchmark, regression, learning]}
+  - {id: A19, file: 19_README_IMPLEMENTACAO_CHANGELOG_TEMPLATES_E_RELEASE_v3_2.docx, activate_for: [release, implementation, templates, changelog]}

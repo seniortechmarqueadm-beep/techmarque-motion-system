@@ -1,0 +1,39 @@
+visual_dna_id: techmarque-motion-foundation
+version: "1.0.0"
+status: controlled_baseline
+brand_signals:
+  - "ponto vermelho como origem, alerta e decisão"
+  - "grid técnico-editorial"
+  - "blocos modulares com hierarquia explícita"
+palette:
+  paper: "#f4f1ea"
+  graphite: "#171814"
+  graphite_panel: "#2b2d26"
+  red: "#b4322c"
+  yellow: "#d9a441"
+  green: "#416a50"
+typography:
+  family: "Inter, Segoe UI, sans-serif"
+  status: controlled_local_stack
+  heading_weight: 800
+  body_weight: 600
+  rule: "Sem fonte remota; qualquer fonte licenciada futura entra como asset versionado."
+layout:
+  canvas: "1080x1920"
+  safe_area_px: 96
+  reading_order: "label → headline → system object → resolution"
+motion_grammar:
+  primary_easing: "cubic-bezier(0.16, 1, 0.3, 1)"
+  entrance: "translate curto + opacity"
+  emphasis: "scale perceptual do sinal"
+  transition: "corte estrutural com fade curto"
+  forbidden:
+    - "CSS transition"
+    - "CSS animation"
+    - "movimento sem função narrativa"
+assets:
+  local_logo: "public/logos/techmarque-symbol-red.png"
+  drive_logo_white_id: "1F4syHJ-aY7U5v01_wcvtvSMJmyR9kLrk4j-i_7W9k18"
+  drive_logo_red_id: "1vFmSsLVLQCVNbcLvigm4ycB2ng3OtK-4UWoTmMRlnkA"
+asset_limitations:
+  - "Os documentos de logo no Drive não retornaram conteúdo legível; o piloto usa o PNG local já presente."

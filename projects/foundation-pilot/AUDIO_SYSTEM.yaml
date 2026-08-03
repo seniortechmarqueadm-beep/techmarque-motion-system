@@ -1,0 +1,22 @@
+audio_system_id: techmarque-social-motion-v1
+status: controlled_baseline
+pilot_mode: silent_by_design
+pilot_reason: "Provar o pipeline sem asset externo, licença ou dependência de síntese."
+production_standard:
+  sample_rate_hz: 48000
+  integrated_lufs: -14
+  true_peak_dbtp: -1
+  voice_priority: true
+  required_layers:
+    - voice_or_primary_message
+    - functional_music
+    - transition_sfx
+  approval_requirements:
+    - "origem e licença registradas"
+    - "sincronismo inspecionado no render"
+    - "ausência de clipping"
+    - "arquivo de áudio versionado ou referenciado por ID canônico"
+forbidden:
+  - "música remota sem licença"
+  - "efeito usado apenas para preencher silêncio"
+  - "aprovar áudio por still"

@@ -1,0 +1,6 @@
+[
+  {"request": "comparar ideias para uma campanha de criativos", "mode": "CREATIVE_LAB", "nodes": ["O04", "A02", "A03", "A04"]},
+  {"request": "implementar composição TypeScript no Remotion", "mode": "ENGINEERING", "nodes": ["A13", "O07"]},
+  {"request": "auditar release e continuidade do filme", "mode": "AUDIT", "nodes": ["A16", "O08", "O09"]},
+  {"request": "organizar as pastas do Studio", "mode": "DISCOVERY", "nodes": ["O01"]}
+]

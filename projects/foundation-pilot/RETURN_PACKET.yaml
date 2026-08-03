@@ -1,0 +1,80 @@
+logical_agent_id: motion-director-techmarque-n7
+from_surface: motion-director-techmarque
+to_surface: codex_local
+project_id: techmarque-motion-system
+task_id: operational-foundation-v1-1
+creative_id: techmarque-foundation-pilot
+status: PASS
+changed_files:
+  - AGENTS.md
+  - CODEX_LOCAL_MANIFEST.yaml
+  - .codex/
+  - docs/
+  - projects/foundation-pilot/
+  - public/logos/
+  - scripts/
+  - src/Root.tsx
+  - src/compositions/TechmarqueFoundationPilot.tsx
+  - tests/foundation-pilot.test.ts
+  - package.json
+  - pnpm-lock.yaml
+commands:
+  - node scripts/discover-workspace.mjs .
+  - node scripts/route-request.mjs foundation_operational_validation
+  - pnpm install --frozen-lockfile
+  - pnpm typecheck
+  - pnpm lint
+  - pnpm test -- --run
+  - pnpm build
+  - pnpm still:foundation
+  - pnpm render:foundation
+validations: &validation_results
+  - name: codex_local_pack
+    status: PASS
+    evidence: 20 artifacts validated and 4 local tests passed
+  - name: task_handoff
+    status: PASS
+    evidence: strict N7 packet validation
+  - name: remotion_composition
+    status: PASS
+    evidence: TechmarqueFoundationPilot 1080x1920 30fps 360 frames
+  - name: code_quality
+    status: PASS
+    evidence: typecheck lint Vitest and bundle passed
+  - name: visual_render_qa
+    status: PASS
+    evidence: frames 0 45 75 120 165 225 270 315 inspected
+  - name: final_render
+    status: PASS
+    evidence: out/foundation-pilot/techmarque-foundation-pilot.mp4 sha256 A338F195E276002795598CC46CF23AA7C3E40ACD9BEE5FAB86C8ABD22D3F6823
+  - name: remotion_studio
+    status: PASS
+    evidence: HTTP 200 composition selected and preview playback verified
+validation: *validation_results
+artifacts:
+  - out/foundation-pilot/techmarque-foundation-pilot.mp4
+  - out/foundation-pilot/frame-000.png
+  - out/foundation-pilot/frame-045.png
+  - out/foundation-pilot/frame-075.png
+  - out/foundation-pilot/frame-120.png
+  - out/foundation-pilot/frame-165.png
+  - out/foundation-pilot/frame-225.png
+  - out/foundation-pilot/frame-270.png
+  - out/foundation-pilot/frame-315.png
+  - projects/foundation-pilot/RENDER_QA_MANIFEST.json
+visual_deviations: []
+limitations:
+  - The pilot is intentionally silent; AUDIO_SYSTEM.yaml defines the production standard.
+  - The connected Drive engineering folder returned no indexed files and both logo Docs exposed metadata without readable content.
+  - GitHub CLI credentials were invalid during preflight; the connected GitHub integration remained available for repository operations.
+state_patch: projects/foundation-pilot/STATE_PATCH.yaml
+execution_surface: "C:/Users/allan/Documents/Codex/techmarque-motion-system"
+remotion_modules:
+  - remotion-markup
+  - remotion-interactivity
+  - remotion-render
+render_qa:
+  inspected_frames: [0, 45, 75, 120, 165, 225, 270, 315]
+  still: PASS
+  preview: PASS
+  final_render: PASS

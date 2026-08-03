@@ -1,0 +1,25 @@
+creative_id: sf00-example
+mode: DISCOVERY
+routes:
+  - route_id: route-a
+    operator: MATERIALIZE
+    thesis: transformar a dor abstrata em um objeto que atravessa o filme
+    mechanism: o objeto muda de estado quando a operação ganha caminho
+    translation: composição editorial, estados A/B, movimento causal e UI determinística
+    signature: assinatura visual ligada ao mecanismo do negócio
+    mvp: dois estados e uma transição editável
+    premium: sistema de cenas, som e variações de formato
+    fallback: composição 2D sem dependência generativa
+    editability: alta
+    repeatability: alta
+    risks: []
+    scores:
+      brand: 4
+      novelty: 4
+      clarity: 4
+      feasibility: 4
+      editability: 5
+      risk: 2
+selection:
+  selected_route_id: null
+  rationale: null

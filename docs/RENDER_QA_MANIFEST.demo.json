@@ -1,0 +1,49 @@
+{
+  "composition_id": "TechmarqueMotionDemo",
+  "version": "draft",
+  "fps": 30,
+  "duration_in_frames": 150,
+  "strategy": "generic-percentage",
+  "frames": [
+    {
+      "role": "opening",
+      "frame": 0,
+      "status": "inspected"
+    },
+    {
+      "role": "first-reveal",
+      "frame": 23,
+      "status": "inspected"
+    },
+    {
+      "role": "dense-content",
+      "frame": 75,
+      "status": "inspected"
+    },
+    {
+      "role": "transition",
+      "frame": 113,
+      "status": "inspected"
+    },
+    {
+      "role": "cta",
+      "frame": 120,
+      "status": "inspected"
+    }
+  ],
+  "artifacts": [
+    "out/techmarque-motion-demo.mp4",
+    "out/qa/demo-opening.png",
+    "out/qa/demo-first-reveal.png",
+    "out/qa/demo-dense-content.png",
+    "out/qa/demo-transition.png",
+    "out/qa/demo-cta.png"
+  ],
+  "inspection": {
+    "status": "pass",
+    "inspected_at": "2026-07-19T17:40:00-03:00",
+    "inspected_by": "Codex visual QA",
+    "issues": [],
+    "scope_note": "Visual smoke test only. Generic percentage sampling is not a narrative CTA audit."
+  }
+}
